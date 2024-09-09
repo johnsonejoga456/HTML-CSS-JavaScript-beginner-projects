@@ -27,4 +27,4 @@ nextButton.addEventListener('click', () => {
 prevButton.addEventListener('click', () => {
     currentSlide =(currentSlide -1 + slides.length) % slides.length; //Redirect to the prevoius slide
     showSlide(currentSlide);
-})
+});
