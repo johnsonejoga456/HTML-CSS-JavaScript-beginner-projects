@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sign Up</title>
+   <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+   <div class="container">
+      <h1>Sign Up</h1>
+      <form id="signup">
+         <div class="form-field">
+            <label for="firstname">First name</label><br>
+            <input type="text" id="firstname" class="firstname" required>
+         </div><br>
+         <div class="form-field">
+            <label for="lastname">Last Name</label><br>
+            <input type="text" id="lastname" class="lastname" required>
+         </div><br>
+         <div class="form-field">
+            <label for="username">Username</label><br>
+            <input type="text" id="username" class="username" required>
+         </div><br>
+         <div class="form-field">
+            <label for="email">Email</label><br>
+            <input type="email" id="email" class="email" required>
+         </div><br>
+         <div class="form-field">
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" placeholder="Create your new password" required>
+         </div><br>
+         <div class="form-field">
+            <label for="cofirmpassword">Confirm Password</label><br>
+            <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm your password" required>
+         </div><br>
+         <div class="form-field">
+            <label for="tel">Telephone Number</label><br>
+            <input type="tel" id="tel" name="tel" placeholder="Enter your telephone number" required>
+         </div><br>
+         <div class="form-field">
+            <label for="dob">Date of Birth</label><br>
+            <input type="date" id="dob" name="dob" required>
+         </div><br>
+         <div class="form-field">
+            <label for="gender">Gender</label><br>
+            <select id="gender" name="gender" required>
+               <option value="disabled selected">Select your gender</option>
+               <option value="male">Male</option>
+               <option value="female">Female</option>
+               <option value="others">Others</option>
+            </select>
+         </div><br>
+         <div class="form-field">
+            <label for="country">Country</label><br>
+            <select id="country" name="country" required>
+               <option value="disabled selected">Select nationality</option>
+               <option value="us">United States</option>
+               <option value="ca">Canada</option>
+               <option value="fr">France</option>
+               <option value="ng">Nigeria</option>
+               <option value="rsa">Russia</option>
+            </select>
+         </div><br>
+         <div class="form-field">
+            <label for="terms">
+               I agree to the <a href="#">Terms and Condition</a>
+               <input type="checkbox" id="terms" name="terms" required>
+         </div><br>
+         <div>
+            <button type="submit">Sign Up</button>
+         </div>
+         <div>
+            <p>Already have an accout? <a href="login.html">Login</a></p>
+         </div>
+            <script src="signup.js"></script>
+      </form>
+   </div>
+</body>
+</html>
