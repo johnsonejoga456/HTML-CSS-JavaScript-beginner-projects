@@ -1,0 +1,65 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .slider-container {
+    width: 80%;
+    max-width: 1000px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-slider {
+    display: none;
+  }
+  
+  .image-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Show the first image by default */
+  .image-slider:first-child {
+    display: block;
+  }
+  
+  /* Navigation buttons */
+  button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+  }
+  
+  button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Positioning the buttons */
+  button.prev {
+    left: 10px;
+  }
+  
+  button.next {
+    right: 10px;
+  }
+  
