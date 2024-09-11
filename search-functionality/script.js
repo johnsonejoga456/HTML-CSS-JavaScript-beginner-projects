@@ -1,52 +1,46 @@
 document.getElementById('searchContainer').addEventListener('submit', function(e) {
-    //prevent the page from reloading
     e.preventDefault();
 
-    const searchText = document.getElementById('searchInput').value.trim();
+    const searchText = document.getElementById('searchInput').value.trim().toLowerCase();
 
-    // function to fetch data
     if (searchText) {
-        fetchSearchResults(searchText);
+        fetchWikipediaResults(searchText);  // Fetch text info from Wikipedia
     } else {
-        alert("please, enter a search term");
+        alert("Please enter a search term");
     }
 });
 
-// fecth results
-function fetchSearchResults(searchText) {
-    const searchEngineID = '60c6fb4071e15419b';
-    const query = 'Building search functionality with JavaScript';
+// Fetching text information from Wikipedia API
+function fetchWikipediaResults(searchText) {
+    const wikiUrl = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(searchText)}`;
 
-    const apiUrl = `https://www.googleapis.com/customsearch/v1?key=${apikey}&cx=${searchEngineID}&q=${encodeURIComponent(query)}`;
-
-    fetch(apiUrl)
+    fetch(wikiUrl)
         .then(response => {
             if (!response.ok) {
-                throw new Error("Check your internet connectivity");
+                throw new Error("No information found.");
             }
-            return response.json(); // return the response to JSON
+            return response.json();
         })
         .then(data => {
-            console.log(data);
-            displayResults(data);
+            displayWikipediaResults(data);
         })
         .catch(error => {
-            console.error('There has been a problem:', error);
-        })
+            console.error('Error fetching Wikipedia results:', error);
+            document.getElementById('textResults').innerHTML = `<p>${error.message}</p>`;
+        });
 }
 
-// section to display results
-function displayResults(data) {
-    const resultsDiv = document.getElementById('results');
-    resultsDiv. innerHTML= '';
+// Display Wikipedia text results
+function displayWikipediaResults(data) {
+    const textResultsDiv = document.getElementById('textResults');
+    textResultsDiv.innerHTML = '';
 
-    if (data.items && data.items.length > 0) {
-        data.items.forEach(result => {
-            const resultItem = document.createElement('div');
-            resultItem.innerHTML = `<p><a href="${result.link}">${result.title}</a></p>`;
-            resultsDiv.appendChild(resultItem);
-        });
-    } else {
-        resultsDiv.innerHTML = '<p>No results found</p>';
-    }
+    const title = document.createElement('h3');
+    title.textContent = data.title;
+
+    const description = document.createElement('p');
+    description.textContent = data.extract;
+
+    textResultsDiv.appendChild(title);
+    textResultsDiv.appendChild(description);
 }
