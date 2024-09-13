@@ -1,0 +1,33 @@
+.container {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+}
+
+input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+button {
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+}
