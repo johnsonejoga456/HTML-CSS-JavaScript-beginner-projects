@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    background-color: #f7e5f4;
+    margin-left: 100px;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Roboto Slab;
+}
+
+container {
+    text-align: center;
+}
+
+input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px 0;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+#generateButton {
+    margin-left: 150px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+}
+
+#generateButton:hover {
+    background-color: #6a996d;
+}
