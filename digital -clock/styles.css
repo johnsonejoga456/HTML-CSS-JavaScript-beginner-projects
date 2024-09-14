@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c34;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: wheat;
+}
+
+#clock {
+    font-size: 60px;
+    letter-spacing: 3px;
+}
+
+#ampm {
+    font-size: 20px;
+    vertical-align: super;
+}
