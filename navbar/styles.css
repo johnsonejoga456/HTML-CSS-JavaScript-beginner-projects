@@ -1,0 +1,59 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.toggle-btn {
+    display: flex;
+    font-size: none;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 780px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        width: 100px;
+        background-color: #333;
+    }
+    .menu li {
+        text-align: center;
+        margin: 15px 0;
+    }
+    .toggle-btn {
+        display: block;
+    }
+    .menu.show {
+        display: flex;
+    }
+}
