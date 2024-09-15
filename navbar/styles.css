@@ -1,15 +1,21 @@
+body {
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #df9f9f;
     padding: 10px;
     color: white;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.logo img {
+    height: 50px;
+    width: auto;
+    mix-blend-mode: multiply;
 }
 
 .menu {
@@ -17,6 +23,13 @@
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
 .menu li {
@@ -33,6 +46,7 @@
     display: flex;
     font-size: none;
     cursor: pointer;
+    font-size: 20px;
 }
 
 /* Responsive Styles */
@@ -41,19 +55,29 @@
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 72px;
         left: 0px;
         width: 100px;
-        background-color: #333;
+        background-color: #836565;
     }
     .menu li {
-        text-align: center;
-        margin: 15px 0;
+        margin: 10px 0;
     }
     .toggle-btn {
         display: block;
     }
     .menu.show {
         display: flex;
+    }
+}
+
+/* additional responsive styles */
+@media (max-width: 480px) {
+    .logo img {
+        height: 40px;
+    }
+
+    .menu li a {
+        font-size: 16px;
     }
 }
