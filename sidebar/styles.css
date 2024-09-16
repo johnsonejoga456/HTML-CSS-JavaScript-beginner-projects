@@ -1,0 +1,88 @@
+/* Basic styling*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 20px;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidebar .logo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.sidebar .logo-header img {
+    max-width: 100px;
+}
+
+.sidebar .info-list {
+    list-style: none;
+    padding: 20px 10px;
+}
+
+.sidebar .info-list li {
+    margin: 20px 0;
+}
+
+.sidebar .info-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.sidebar .info-list li a:hover {
+    background-color: #555;
+}
+
+/* Toggle icon styling */
+.fa-bars {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10; /* Make sure the toggle button is above the sidebar */
+}
+
+/* Open the sidebar */
+.sidebar.open {
+    left: 0;
+}
+
+/* Main content margin when sidebar is opened */
+body.sidebar-open {
+    margin-left: 250px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar .info-list li a {
+        font-size: 16px;
+    }
+}
