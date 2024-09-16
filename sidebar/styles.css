@@ -16,7 +16,7 @@ body {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #333;
+    background-color: #9c8f8f;
     padding-top: 20px;
     transition: left 0.3s ease-in-out;
 }
@@ -25,11 +25,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 20px;
 }
 
 .sidebar .logo-header img {
     max-width: 100px;
+    mix-blend-mode: multiply;
 }
 
 .sidebar .info-list {
@@ -66,12 +67,12 @@ body {
 }
 
 /* Open the sidebar */
-.sidebar.open {
+.sidebar.activate {
     left: 0;
 }
 
 /* Main content margin when sidebar is opened */
-body.sidebar-open {
+body.sidebar-actiate{
     margin-left: 250px;
     transition: margin-left 0.3s ease-in-out;
 }

@@ -1,7 +1,6 @@
 // Get the elements
 const bars = document.querySelector(".fa-bars");
 const sidebar = document.querySelector(".sidebar");
-const closingButton = document.querySelector(".fa-times");
 
 // Toggle sidebar when clicking the bars (hamburger menu)
 bars.addEventListener("click", function() {
