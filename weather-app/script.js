@@ -1,4 +1,4 @@
-document.getElementById('getWeather').addEventListener('click', function () {
+document.getElementById('getWeather').addEventListener('click', function (e) {
     e.preventDefault();
     const city = document.getElementById('cityInput').value;
     if (city) {
@@ -10,7 +10,8 @@ document.getElementById('getWeather').addEventListener('click', function () {
 
 function getweather(city) {
     const apiKey = "3df2f26db106d74fad16d6fa2fc6be0c";
-    const apiUrl = "https://api.openweather.map.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric";
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
 
     fetch(apiUrl)
         .then(response => {

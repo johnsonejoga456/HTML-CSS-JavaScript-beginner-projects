@@ -15,7 +15,7 @@ body {
 
 h1 {
     color: #271515;
-    font-size: 15px;
+    font-size: 20px;
     font-family: sans-serif;
     
 }
@@ -38,6 +38,8 @@ button:hover {
 }
 
 #displayWeather {
+    font-family: SUSE;
     margin-top: 20px;
     font-size: 15px;
+    padding: 15px;
 }
