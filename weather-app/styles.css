@@ -1,0 +1,42 @@
+body {
+    background-color: #FF0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+}
+
+h1 {
+    color: #fff;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+input {
+    padding: 10px;
+    width: 100px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #002a2a;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #002a2a;
+}
+
+#displayWeather {
+    margin-top: 20px;
+    font-size: 15px;
+}
