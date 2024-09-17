@@ -1,5 +1,5 @@
 body {
-    background-color: #FF0000;
+    background-color: #dcb8b8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,9 +14,10 @@ body {
 }
 
 h1 {
-    color: #fff;
+    color: #271515;
     font-size: 15px;
     font-family: sans-serif;
+    
 }
 
 input {
