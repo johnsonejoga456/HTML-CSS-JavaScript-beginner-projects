@@ -5,7 +5,6 @@
 }
 
 body {
-    font-family: Lato;
     background-color: #e89d9d;
     color: #f0f0f0;
 }
@@ -29,10 +28,11 @@ header {
 .navbar ul li a {
     color: #f0f0f0;
     text-decoration: none;
+    line-break: normal;
 }
 
 .logo img {
-    width: 100px;
+    width: 80px;
     mix-blend-mode: multiply;
     height: auto;
 }
@@ -51,7 +51,7 @@ header {
 
 .product-info h1 {
     font-family: EB Garamond;
-    font-size: 48px;
+    font-size: 40px;
     color: #ff5722;
     margin-bottom: 20px;
 }
@@ -61,9 +61,47 @@ header {
     margin-bottom: 30px;
 }
 
+.buy-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
 .product-image img {
     width: 200px;
     height: auto;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
     right: 20px;
+}
+
+.features-section, .pricing-section, .review-section .contact-section {
+    background-color: #1c1c1c;
+    padding: 50px 20px;
+    text-align: center;
+    font-family: Lato;
+}
+
+.features-section h2, .pricing-section h2, .review-section h2 .contact-section h2 {
+    color: #ff5722;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #2b2b2b;
+    text-align: center;
+}
+
+footer p {
+    color: #f0f0f0;
 }
