@@ -5,44 +5,58 @@
 }
 
 body {
-    background-color: #e89d9d;
+    background-color: #341111;
     color: #f0f0f0;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #ec9292;
-    padding: 20px;
-    text-align: center;
+    background-color: #403838;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
 }
 
 .navbar ul {
     display: flex;
-    justify-content: center;
     list-style: none;
 }
 
 .navbar ul li {
-    margin: 0 2px;
+    margin-left: 20px;
 }
 
 .navbar ul li a {
     color: #f0f0f0;
     text-decoration: none;
-    line-break: normal;
+    font-weight: 400;
+}
+
+.navbar ul li a:hover {
+    color: #f39c12;
 }
 
 .logo img {
-    width: 80px;
-    mix-blend-mode: multiply;
+    width: 120px;
     height: auto;
+    mix-blend-mode: multiply;
 }
 
 .landing-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    background-color:#ec9292;
-    padding: 50px;
+    background-color:#332c2c;
+    padding: 100px 50px;
+    min-height: 100vh;
+}
+
+.landing-section .product-info {
+    flex: 1;
 }
 
 .product-info {
@@ -63,31 +77,41 @@ header {
 
 .buy-btn {
     background-color: #ff5722;
+    font-weight: bold;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
 }
 
+.buy-btn:hover {
+    background-color: #c0392b;
+}
+
 .product-image img {
     width: 200px;
     height: auto;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
-    right: 20px;
+    border-radius: 20px;
 }
 
-.features-section, .pricing-section, .review-section .contact-section {
+.features-section, .pricing-section, .review-section {
     background-color: #1c1c1c;
     padding: 50px 20px;
     text-align: center;
     font-family: Lato;
 }
 
-.features-section h2, .pricing-section h2, .review-section h2 .contact-section h2 {
+.features-section h2, .pricing-section h2, .review-section h2, .contact-section h2 {
+    font-family: EB Garamond;
     color: #ff5722;
     margin-bottom: 30px;
 }
 
+.review-list {
+    list-style: none;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
 ul {
     list-style: none;
 }
@@ -98,10 +122,20 @@ ul li {
 }
 
 footer {
-    background-color: #2b2b2b;
+    background-color: #403838;
     text-align: center;
 }
 
 footer p {
     color: #f0f0f0;
+    text-align: center;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+}
+
+footer .social-media img {
+    width: 40px;
+    height: auto;
 }
