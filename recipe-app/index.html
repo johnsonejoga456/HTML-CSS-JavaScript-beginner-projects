@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+     </style>
 </head>
 <body>
-    <header>
-        <navbar>
-            <div>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-        </navbar>
-    </header>
+    <section class="hero-img">
+        <div class="input-container">
+            <h1>Recipe Finder</h1>
+            <input type="text" id="searchInput" placeholder="Enter Ingredients">
+        <button onclick="findRecipes()">Search Recipes</button>
+        </div>
+    </section>
+
+    <section id="recipe-results">
+        <!--Search results will appear  here-->
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
