@@ -1,8 +1,8 @@
 function findRecipes() {
-    const searchInput = document.getElementById('searchInput').value;
+    const searchInput = document.getElementById('searchInput').value.trim();
     const recipeResults = document.getElementById('recipe-results');
 
-    if (searchInput === " ") {
+    if (searchInput.trim() === " ") {
         recipeResults.innerHTML = "<p>Please enter ingredients to search.<p>";
         return;
     }
@@ -10,10 +10,11 @@ function findRecipes() {
 }
 
 // fetching API recipe results
-function fetchsearchResults(recipeResults) {
-    const apiKey = `https://api.spoonacular.com/recipes/complexSearch/${encodeURICOmponent(searchInput)}`;
+function fetchsearchResults(searchInput, recipeResults) {
+    const apiKey = "0fb4609873c8427982e7bae64e846c1c";
+    const apiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${encodeURIComponent(searchInput)}&apiKey=${apiKey}`;
 
-    fetch(apiKey)
+    fetch(apiUrl)
     .then(response => {
         if (!response.ok) {
             throw new Error("No information found.");
@@ -22,13 +23,13 @@ function fetchsearchResults(recipeResults) {
     })
     .then(data => {
         recipeResults.innerHTML = "";
-        data.forEach(recipe => {
+        data.results.forEach(recipe => {
             recipeResults.innerHTML += `
                 <div class="recipe-card">
                     <img src="${recipe.image}" alt="${recipe.title}">
-                    <h3>${recipe.title}</p>
+                    <h3>${recipe.title}</h3>
                     <p>Used Ingredients: ${recipe.usedIngredientsCount}</p>
-                    <button onclick="view.Recipe(${recipe.id})">View Recipe</button>
+                    <button onclick="viewRecipe(${recipe.id})">View Recipe</button>
                 </div>
             `;
         });
