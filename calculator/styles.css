@@ -14,11 +14,12 @@
     height: 40px;
     font-size: 35px;
     padding: 10px;
-    text-align: center;
+    text-align: right;
 }
 
 .button {
     background-color: #333;
+    color: white;
     height: 80px;
     width: 80px;
     float: left;
