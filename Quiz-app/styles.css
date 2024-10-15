@@ -1,0 +1,14 @@
+* {
+    padding: 0;
+}
+
+body {
+    font-family:"Libre Franklin";
+    padding-left: 0% auto;
+    background-color: #f4f4f4;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
