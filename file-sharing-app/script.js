@@ -37,6 +37,11 @@ function uploadFiles () {
     for (let i = 0; i < input.files.length; i++) {
         const files = files[i];
         const listItem = document.createElement('div');
-        listItem.textContent = + ' - Uploading ....';
+        listItem.textContent = filename + ' - Uploading ....';
+
+        setTimeout (() => {
+            listItem.textContent = filename + '- Uploaded';
+            progress.style.width = `${((i + 1) / input.files.length) * 100 }%`;
+        }, 1000 * (i + 1))
     }
 }
