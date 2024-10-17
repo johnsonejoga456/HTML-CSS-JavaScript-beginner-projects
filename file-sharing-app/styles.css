@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ShareFiles</h1>
+        <form id="file-form">
+            <input type="file" id="file-input" multiple>
+            <div id="drop-area">Drag & Drop Files here</div>
+            <button type="button" onclick="uploadFiles()">Upload</button>
+        </form>
+        <div id="file-list"></div>
+        <div id="progress-bar" style="display: none;">
+            <div id="progress"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
