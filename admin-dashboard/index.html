@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>TheCodes</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Content</a></li>
+                    <li><a href="#">Analytics</a></li>
+                    <li><a href="#">Comments</a></li>
+                    <li><a href="#">Customize</a></li>
+                </ul>
+            </nav>
+            <div class="settings">
+                <ul>
+                    <li><a href="#">Users</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><button id="toggle-dark-mode">Dark / Light</button></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <input type="text" placeholder="Search...">
+                <div class="profile">
+                    <span>User</span>
+                </div>
+            </header>
+
+            <!-- Stats Section -->
+            <section class="dashboard-stats">
+                <div class="card">
+                    <h3>New Users</h3>
+                    <p>7,373</p>
+                </div>
+                <div class="card">
+                    <h3>Total Orders</h3>
+                    <p>9,373</p>
+                </div>
+                <div class="card">
+                    <h3>Site Visits</h3>
+                    <p>5,373</p>
+                </div>
+                <div class="card">
+                    <h3>This Month</h3>
+                    <p>$6,373</p>
+                </div>
+            </section>
+
+            <!-- Recent Orders -->
+            <section class="recent-orders">
+                <h2>Recent Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>103326</td>
+                            <td>John Doe</td>
+                            <td>admin@onlinetuts.com</td>
+                            <td>6th Sep 2025</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>103327</td>
+                            <td>Juloe Smith</td>
+                            <td>admin@onlinetuts.com</td>
+                            <td>6th Sep 2025</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>103328</td>
+                            <td>Williams</td>
+                            <td>admin@onlinetuts.com</td>
+                            <td>6th Sep 2025</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Chart Section -->
+            <section class="analytics">
+                <h2>Site Analytics</h2>
+                <canvas id="myChart"></canvas>
+            </section>
+
+            <!-- Reminders Section -->
+            <section class="reminders">
+                <h2>Reminders</h2>
+                <ul>
+                    <li class="reminder-item completed">Start Our Meeting</li>
+                    <li class="reminder-item pending">Analysis Our Site</li>
+                    <li class="reminder-item pending">Play Snooker</li>
+                    <li class="reminder-item completed">Start Our Meeting</li>
+                    <li class="reminder-item pending">Play Snooker</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
